@@ -24,6 +24,8 @@
   'opsz' 48
 }
 
+a {width: auto;}
+
 a, button {
   cursor: pointer;
 }
