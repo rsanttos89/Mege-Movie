@@ -1,0 +1,35 @@
+#header {
+  min-height: 80px;
+  max-height: 80px;
+  flex-direction: row;
+  padding-left: 16px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.boxLeft, .boxRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.boxRight {
+  width: auto;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.boxRight button {
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-height: 40px;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

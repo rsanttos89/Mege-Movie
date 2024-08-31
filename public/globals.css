@@ -13,6 +13,7 @@
 
 :root {
   --background: #fff;
+  --background-two: #f8f8f8;
   --active-color: #FA6400;
 }
 
@@ -80,14 +81,13 @@ input[type="password"]::-ms-reveal {
 #root {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 @media (orientation: landscape) {
   #root {
     flex-direction: row;
     height: 100vh;
-    gap: 8px;
   }
 }

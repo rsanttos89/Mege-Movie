@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import styles from "./page.module.css";
+import Header from "./components/Header";
 
 export const metadata: Metadata = {
   title: "Mege Movie",
@@ -9,7 +10,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1>Movie</h1>
+      <Header />
+
+      <section className={styles.body}>
+        <h1>body</h1>
+      </section>
     </main>
   );
 }
