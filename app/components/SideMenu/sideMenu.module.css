@@ -20,6 +20,18 @@
 }
 .home:hover {opacity: 1;}
 
+.titleMenu {
+  padding-bottom: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .button {
   border-right: 3px solid transparent;
   border-left: 3px solid transparent;

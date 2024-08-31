@@ -12,6 +12,7 @@ const SideMenu = () => {
   return (
     <aside id={styles.aside}>
       <button title="Logo Mege Movie" className={`material-symbols-outlined ${styles.home} ${styles.button}`}>flutter</button>
+      <span className={`${styles.titleMenu}`}>menu</span>
 
       <menu id={styles.menu}>
         <Link href="/" title="Home">
