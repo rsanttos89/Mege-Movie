@@ -5,6 +5,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
 }
 
 .button {
