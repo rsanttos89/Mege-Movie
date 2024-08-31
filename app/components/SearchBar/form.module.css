@@ -1,0 +1,30 @@
+#form {
+  display: flex;
+  align-self: start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--background-two);
+  box-shadow: 0px 0px 5px #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  gap: 16px;
+}
+
+#form span {
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#form input {
+  padding: 8px;
+}
+
+@media (orientation: landscape) and (min-width: 800px) {
+  #form {
+    max-width: 85%;
+  }
+}

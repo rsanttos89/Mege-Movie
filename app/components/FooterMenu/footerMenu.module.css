@@ -1,3 +1,6 @@
+#footer {
+  display: flex;
+}
 #menu {
   display: flex;
   background-color: var(--background);
@@ -31,7 +34,7 @@
 }
 
 @media (orientation: landscape) {
-  #menu {
+  #footer {
     display: none;
   }
 }
