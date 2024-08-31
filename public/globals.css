@@ -1,11 +1,91 @@
 * {
   width: 100%;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  border: none;
   outline: none;
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  object-fit: contain;
   font-size: 100%;
+}
+
+:root {
+  --background: #fff;
+  --active-color: #FA6400;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a:hover, button:hover {
+  opacity: 0.6;
+  transition: 0.4;
+}
+
+/* Estilizando a barra de rolagem inteira */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Estilizando a parte "track" da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Estilizando o "thumb" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 10px;
+}
+
+/* Estilizando o thumb quando está sendo pressionado (ativo) */
+::-webkit-scrollbar-thumb:active {
+  background: #ccc;
+}
+
+/* Estilizando o thumb quando está em hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+}
+
+/* Estilizando o canto entre as barras de rolagem horizontal e vertical */
+::-webkit-scrollbar-corner {
+  background: #ccc;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+/* Estilo para navegadores que suportam ::-ms-reveal */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (orientation: landscape) {
+  #root {
+    flex-direction: row;
+    height: 100vh;
+    gap: 8px;
+  }
 }

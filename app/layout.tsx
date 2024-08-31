@@ -1,4 +1,7 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { Roboto } from "next/font/google";
+import SideMenu from "./components/SideMenu";
+import FooterMenu from "./components/FooterMenu";
 import "../public/globals.css";
 
 const inter = Roboto({
@@ -13,7 +16,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        />
+      </head>
+      <body className={inter.className}>
+        <div id="root">
+          <SideMenu />
+          {children}
+          <FooterMenu />
+        </div>
+      </body>
     </html>
   );
 }
