@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import { Roboto } from "next/font/google";
 import SideMenu from "./components/SideMenu";
+import FooterMenu from "./components/FooterMenu";
 import "../public/globals.css";
 
 const inter = Roboto({
@@ -25,6 +26,7 @@ export default function RootLayout({
         <div id="root">
           <SideMenu />
           {children}
+          <FooterMenu />
         </div>
       </body>
     </html>

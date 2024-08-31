@@ -3,5 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+}
+
+@media (orientation: portrait) {
+  .main {
+    height: calc(100vh - 60px);
+  }
 }

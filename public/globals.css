@@ -77,10 +77,15 @@ input[type="password"]::-ms-reveal {
 
 #root {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--background-two);
-  height: 100vh;
-  gap: 8px;
+}
+
+@media (orientation: landscape) {
+  #root {
+    flex-direction: row;
+    height: 100vh;
+    gap: 8px;
+  }
 }
