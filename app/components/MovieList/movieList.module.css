@@ -1,0 +1,31 @@
+#cardMovie {
+  margin-bottom: 64px;
+}
+
+#cardMovie h1 {
+  font-size: 1.5rem;
+}
+
+#cardMovie ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+  gap: 32px;
+}
+
+#cardMovie li {
+  min-width: 186px;
+  max-width: 186px;
+}
+
+#cardMovie .boxText {
+  padding: 0px 0px;
+}
+
+@media (pointer: coarse) {
+  #cardMovie ul::-webkit-scrollbar {
+    display: none;
+  }
+}

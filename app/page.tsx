@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import styles from "./page.module.css";
+import MovieList from "./components/MovieList";
 
 export const metadata: Metadata = {
   title: "Mege Movie",
@@ -9,9 +10,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
-      <section className={styles.body}>
-        <h1>body</h1>
-      </section>
+      <MovieList typeList={"popular"} listTitle={"Popular"} />
+
+      <MovieList typeList={"top_rated"} listTitle={"Melhor avaliado"} />
+
+      <MovieList typeList={"upcoming"} listTitle={"Em breve"} />
     </main>
   );
 }
