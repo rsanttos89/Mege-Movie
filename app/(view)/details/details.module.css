@@ -1,0 +1,40 @@
+.main {
+  height: 100%;
+  padding: 16px;
+  overflow: auto;
+}
+
+.content {
+  padding: 16px;
+  background-color: var(--background-two);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+}
+
+.img {
+  width: auto;
+}
+
+.cardInfo {
+  width: auto;
+  max-width: 460px;
+}
+
+.cardInfo p {
+  margin-bottom: 16px;
+}
+
+@media (orientation: landscape) {
+  .content {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  .main {
+    height: calc(100% - 60px);
+  }
+}

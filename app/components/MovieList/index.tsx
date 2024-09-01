@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './movieList.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Movie {
   id: number;
@@ -78,17 +79,19 @@ const MovieList: React.FC<MovieListProps> = ({ typeList, listTitle }) => {
             style={{ marginBottom: '20px', listStyleType: 'none' }}
             ref={index === movies.length - 1 ? lastMovieElementRef : null}
           >
-            <Image
-              src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
-              alt={movie.title}
-              width={185}
-              height={278} // Proporções da imagem do filme
-              style={{ borderRadius: '4px' }}
-            />
-            <div className={styles.boxText}>
-              <h2>{movie.title}</h2>
-              <p>Rating: {movie.vote_average}</p>
-            </div>
+            <Link href={`details/${movie.id}`}>
+              <Image
+                src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
+                alt={movie.title}
+                width={185}
+                height={278} // Proporções da imagem do filme
+                style={{ borderRadius: '4px' }}
+              />
+              <div className={styles.boxText}>
+                <h2>{movie.title}</h2>
+                <p>Rating: {movie.vote_average}</p>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
