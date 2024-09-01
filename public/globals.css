@@ -68,7 +68,7 @@ a:hover, button:hover {
 /* Estilizando a barra de rolagem inteira */
 ::-webkit-scrollbar {
   width: 0px;
-  height: 4px;
+  height: 5px;
 }
 
 /* Estilizando a parte "track" da barra de rolagem */

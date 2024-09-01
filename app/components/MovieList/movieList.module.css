@@ -4,12 +4,13 @@
 
 #cardMovie h1 {
   font-size: 1.5rem;
+  margin-bottom: 8px;
 }
 
 #cardMovie ul {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   overflow: auto;
   gap: 32px;
@@ -24,8 +25,22 @@
   padding: 0px 0px;
 }
 
+#cardMovie .boxText h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+#cardMovie .boxText p {
+  opacity: 0.7;
+}
+
 @media (pointer: coarse) {
   #cardMovie ul::-webkit-scrollbar {
     display: none;
+  }
+  #cardMovie {
+    margin-bottom: 16px;
   }
 }
