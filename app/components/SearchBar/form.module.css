@@ -1,17 +1,27 @@
-#form {
-  display: flex;
-  flex-direction: row;
+#containerSearch {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  background-color: var(--background-two);
-  border: solid 1px #cccccc50;
+  display: flex;
+}
+
+#form {
   border-radius: 50px;
-  padding: 4px 16px;
-  gap: 16px;
+  padding: 0px 16px;
+  border: solid 1px #cccccc;
+  background-color: var(--background-two);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 #form span {
-  width: auto;
+  min-height: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  max-width: 40px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -19,11 +29,37 @@
 }
 
 #form input {
-  padding: 4px 8px;
+  height: 30px;
+  padding: 0px 8px;
   background-color: var(--background);
   border: solid 1px #cccccc50;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+.results {
+  margin-left: 32px;
+  max-width: 55%;
+  height: 200px;
+  overflow: auto;
+  margin-top: 250px;
+  position: absolute;
+  background-color: var(--background-two);
+  border: solid 1px #cccccc80;
+  padding: 8px;
+  z-index: 99;
+}
+
+.results p {
+  margin-bottom: 8px;
+}
+
+.resultsVisible {
+  display: block;
+}
+
+.resultsHidden {
+  display: none;
 }
 
 @media (orientation: landscape) and (min-width: 800px) {
