@@ -25,10 +25,7 @@ interface Movie {
 
 const MovieDetails = () => {
   const movieId = useParams<{ id: string; }>()
-  console.log(movieId);
 
-  const apiKey = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzMyOWYwYWZmY2JlYWUwMzQ5MDJiMDk3MjM3OGUxOSIsIm5iZiI6MTcyNTE4Njk5Ni44NjMzMzUsInN1YiI6IjY2ZDQ0MjM1OWQ1OWViYzI5ZDQ1OTFlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3JZO_WotFfYWhvUqHIJUB2FmrAJt3w2e8QQcJLZC1sg';
-  
   const [movie, setMovie] = useState<Movie | null>(null);
 
   useEffect(() => {
@@ -37,7 +34,7 @@ const MovieDetails = () => {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: apiKey,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
       },
     };
 
@@ -48,7 +45,7 @@ const MovieDetails = () => {
         setMovie(data);
       })
       .catch(err => console.error('Erro ao buscar os dados:', err));
-  }, [apiKey, movieId]);
+  }, [movieId]);
 
   if (!movie) return <div>Loading...</div>;
 
