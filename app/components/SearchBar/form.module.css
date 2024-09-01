@@ -68,3 +68,9 @@
     max-width: 60%;
   }
 }
+
+@media (orientation: portrait) {
+  .results {
+    max-width: 75%;
+  }
+}
