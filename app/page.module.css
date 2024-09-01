@@ -1,13 +1,5 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100vh;
-}
-
-.body {
   height: 100%;
-  padding: 16px;
   overflow: auto;
+  padding: 16px;
 }

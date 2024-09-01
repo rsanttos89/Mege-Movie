@@ -1,10 +1,9 @@
 #aside {
   display: none;
   height: 100%;
-  min-width: 56px;
-  max-width: 56px;
-  background-color: var(--background);
-  box-shadow: 0px 0px 4px #ccc;
+  min-width: 70px;
+  max-width: 70px;
+  background-color: var(--background-two);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -15,10 +14,16 @@
   overflow: auto;
 }
 
-.home {
-  cursor: default;
+#menu a {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 0.7rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
-.home:hover {opacity: 1;}
 
 .titleMenu {
   padding-bottom: 8px;
@@ -38,8 +43,8 @@
   background-color: transparent;
   min-height: 60px;
   max-height: 60px;
-  min-width: 56px;
-  max-width: 56px;
+  min-width: 70px;
+  max-width: 70px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -48,7 +53,7 @@
 
 .activeLink {
   font-weight: bold;
-  border-right: 3px solid var(--active-color);
+  color: var(--active-color);
 }
 
 @media (orientation: landscape) {

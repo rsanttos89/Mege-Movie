@@ -5,10 +5,11 @@ import FooterMenu from "./components/FooterMenu";
 import { ThemeProvider } from './context/ThemeContext';
 
 import "../public/globals.css";
+import Header from "./components/Header";
 
 const inter = Roboto({
   subsets: ["latin"],
-  weight: "100"
+  weight: "400"
 });
 
 export default function RootLayout({
@@ -27,8 +28,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <div id="root">
-            <SideMenu />
-            {children}
+            <Header />
+
+            <div className="container">
+              <SideMenu />
+              {children}
+            </div>
+            
             <FooterMenu />
           </div>
         </ThemeProvider>

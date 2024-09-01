@@ -8,6 +8,8 @@ const Header = () => {
 
   return (
     <header id={styles.header}>
+      <button title="Logo Mege Movie" className={`material-symbols-outlined ${styles.button}`}>flutter</button>
+
       <div className={styles.boxLeft}>
         <SearchBar />
       </div>
