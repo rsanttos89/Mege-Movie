@@ -1,8 +1,56 @@
+```markdown
+# Next.js Movie App
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/your-repository.git
+cd your-repository
+```
+
+### 2. Install Dependencies
+
+After cloning the repository, install the necessary dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 3. Set Up Environment Variables
+
+To use the application, you need to consume the API provided by [The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api). Follow these steps to set up your API key:
+
+1. **Create a TMDb Account**:  
+   Visit [TMDb's website](https://www.themoviedb.org/signup) and sign up for a free account.
+
+2. **Obtain an API Key**:  
+   After creating an account, navigate to your account settings, find the "API" section, and request a new API key.
+
+3. **Configure the Environment Variable**:  
+   Create a `.env.local` file in the root of your project.  
+   Add your API key to this file as follows:
+
+   ```env
+   NEXT_PUBLIC_API_KEY=your_tmdb_api_key_here
+   ```
+
+   Replace `your_tmdb_api_key_here` with the API key you obtained from TMDb.
+
+### 4. Run the Development Server
+
+Once you have set up the environment variables, start the development server:
 
 ```bash
 npm run dev
@@ -18,7 +66,24 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 5. Image Loading Configuration
+
+If you encounter issues with loading images from external sources (e.g., `image.tmdb.org`), make sure your `next.config.js` includes the following configuration:
+
+```javascript
+// next.config.js
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        pathname: '/t/p/**',
+      },
+    ],
+  },
+};
+```
 
 ## Learn More
 
