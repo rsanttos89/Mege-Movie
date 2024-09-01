@@ -13,27 +13,26 @@ const FooterMenu = () => {
   return (
     <footer id={styles.footer}>
       <menu id={styles.menu}>
-        <button
-          title="Logout"
-          className={`material-symbols-outlined ${styles.button}`}>
-          account_circle
-        </button>
-
         <Link href="/" title="Home">
           <button
             className={`${pathname === '/' ? styles.activeLink : styles.link} 
             material-symbols-outlined ${styles.button}`}>live_tv</button>
         </Link>
+
+        <ThemeToggle />
+
         <Link href="/favorites" title="Favorites" >
           <button
             className={`${pathname === '/favorites' ? styles.activeLink : styles.link} 
             material-symbols-outlined ${styles.button}`}>favorite</button>
         </Link>
 
-        <ThemeToggle />
+        <button
+          className={`material-symbols-outlined ${styles.button}`}>
+          account_circle
+        </button>
 
         <button
-          title="Logout"
           className={`material-symbols-outlined ${styles.button}`}>
           logout
         </button>
