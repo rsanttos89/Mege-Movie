@@ -2,11 +2,14 @@
 import { Roboto } from "next/font/google";
 import SideMenu from "./components/SideMenu";
 import FooterMenu from "./components/FooterMenu";
+import { ThemeProvider } from './context/ThemeContext';
+
 import "../public/globals.css";
+import Header from "./components/Header";
 
 const inter = Roboto({
   subsets: ["latin"],
-  weight: "100"
+  weight: "400"
 });
 
 export default function RootLayout({
@@ -23,11 +26,18 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div id="root">
-          <SideMenu />
-          {children}
-          <FooterMenu />
-        </div>
+        <ThemeProvider>
+          <div id="root">
+            <Header />
+
+            <div className="container">
+              <SideMenu />
+              {children}
+            </div>
+            
+            <FooterMenu />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

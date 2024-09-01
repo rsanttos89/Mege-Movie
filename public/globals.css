@@ -15,6 +15,18 @@
   --background: #fff;
   --background-two: #f8f8f8;
   --active-color: #FA6400;
+  --text-color: #121212;
+}
+
+[data-theme='dark'] {
+  --background: #121212;
+  --background-two: #242424;
+  --text-color: #f8f8f8;
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--text-color);
 }
 
 .material-symbols-outlined {
@@ -29,11 +41,34 @@ a {width: auto;}
 
 a, button {
   cursor: pointer;
+  color: var(--text-color);
 }
 
 a:hover, button:hover {
   opacity: 0.6;
   transition: 0.4;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#root .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (orientation: landscape) {
+  #root {
+
+  }
 }
 
 /* Estilizando a barra de rolagem inteira */
@@ -76,18 +111,4 @@ input::placeholder {
 /* Estilo para navegadores que suportam ::-ms-reveal */
 input[type="password"]::-ms-reveal {
   display: none;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (orientation: landscape) {
-  #root {
-    flex-direction: row;
-    height: 100vh;
-  }
 }
