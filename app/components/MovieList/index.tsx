@@ -31,7 +31,7 @@ const MovieList: React.FC<MovieListProps> = ({ typeList, listTitle }) => {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MzMyOWYwYWZmY2JlYWUwMzQ5MDJiMDk3MjM3OGUxOSIsIm5iZiI6MTcyNTE4Njk5Ni44NjMzMzUsInN1YiI6IjY2ZDQ0MjM1OWQ1OWViYzI5ZDQ1OTFlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3JZO_WotFfYWhvUqHIJUB2FmrAJt3w2e8QQcJLZC1sg'
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
         }
       };
 
