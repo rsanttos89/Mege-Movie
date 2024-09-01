@@ -2,6 +2,8 @@
 import { Roboto } from "next/font/google";
 import SideMenu from "./components/SideMenu";
 import FooterMenu from "./components/FooterMenu";
+import { ThemeProvider } from './context/ThemeContext';
+
 import "../public/globals.css";
 
 const inter = Roboto({
@@ -23,11 +25,13 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div id="root">
-          <SideMenu />
-          {children}
-          <FooterMenu />
-        </div>
+        <ThemeProvider>
+          <div id="root">
+            <SideMenu />
+            {children}
+            <FooterMenu />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -17,6 +17,15 @@
   --active-color: #FA6400;
 }
 
+[data-theme='dark'] {
+  --background: #121212;
+  --background-two: #242424;
+}
+
+html, body {
+  background-color: var(--background);
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

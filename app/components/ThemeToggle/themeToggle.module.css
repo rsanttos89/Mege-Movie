@@ -1,0 +1,11 @@
+#button {
+  max-width: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
