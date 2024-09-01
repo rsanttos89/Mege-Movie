@@ -65,12 +65,6 @@ a:hover, button:hover {
   height: 100%;
 }
 
-@media (orientation: landscape) {
-  #root {
-
-  }
-}
-
 /* Estilizando a barra de rolagem inteira */
 ::-webkit-scrollbar {
   width: 3px;
